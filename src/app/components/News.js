@@ -1,6 +1,7 @@
 // News API Key: pub_57394d8d524e4d322bfbc768c5fe4a1f9766d
 import React, { Component } from 'react'
 import NewsItem from './NewsItem'
+import Router from 'next/router';
 
 export class News extends Component {
   articles =
@@ -321,7 +322,22 @@ export class News extends Component {
   render() {
     return (
         <>
-        <NewsItem Title='my-Title' Description='my-Description' imageUrl="https://apicms.thestar.com.my/uploads/images/2024/10/31/2993493.jpg"/>
+        <div className="bg-white py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Daily Pulse</h2>
+              <p className="mt-2 text-lg/8 text-gray-600">"Stay informed with DailyPulse, your go-to platform for up-to-the-minute news coverage, insightful articles, and in-depth analysis across politics, entertainment, sports, and more. Get the latest updates, anytime, anywhere."</p>
+            </div>
+            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              <NewsItem Title='my-Title' Description='my-Description' imageUrl="https://apicms.thestar.com.my/uploads/images/2024/10/31/2993493.jpg"/>
+              <NewsItem Title='my-Title' Description='my-Description' imageUrl="https://apicms.thestar.com.my/uploads/images/2024/10/31/2993493.jpg"/>
+              <NewsItem Title='my-Title' Description='my-Description' imageUrl="https://apicms.thestar.com.my/uploads/images/2024/10/31/2993493.jpg"/>
+              <NewsItem Title='my-Title' Description='my-Description' imageUrl="https://apicms.thestar.com.my/uploads/images/2024/10/31/2993493.jpg"/>
+              <NewsItem Title='my-Title' Description='my-Description' imageUrl="https://apicms.thestar.com.my/uploads/images/2024/10/31/2993493.jpg"/>
+              <NewsItem Title='my-Title' Description='my-Description' imageUrl="https://apicms.thestar.com.my/uploads/images/2024/10/31/2993493.jpg"/>
+            </div>
+          </div>
+        </div>
       </>
     )
   }

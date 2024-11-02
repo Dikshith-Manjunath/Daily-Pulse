@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "News-Crazy",
+  title: "Daily Pluse",
   description: "This is a tutorial app and I am literally learning fucking NEXT JS.",
 };
 
