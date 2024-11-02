@@ -1,22 +1,22 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react' 
+ 
 export default class NewsItem extends Component {
   render(props) {
-    let { Title, Description, imageUrl, nesUrl} = this.props;
+    let { Title, Description, imageUrl, language, category, source_name, Link, date } = this.props;
     const posts = [
         {
           id: 1,
           title: `${Title}`,
-          href: "https://le10sport.com/football/mercato/mercato-henry-a-vendu-la-meche-pour-le-retour-de-zidane-718960",
+          href: `${Link}`,
           description:
             `${Description}`,
-          date: 'Oct 16, 2024',
+          date: `${date}`,
           datetime: '2020-03-16',
-          category: { title: 'Sports', href: 'https://www.telegraphherald.com' },
-          author: {
-            name: 'Telegraph Herald',
-            role: 'United States of America',
-            href: 'https://www.telegraphherald.com',
+          category: { title: `${category}`, href: '#' },
+          source: {
+            name: `${source_name}`,
+            role: `${language}`,
+            href: `/`,
             imageUrl:`${imageUrl}`,
           },
         },
@@ -32,7 +32,7 @@ export default class NewsItem extends Component {
                     </time>
                     <a
                       href={post.category.href}
-                      className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                      className="relative z-10 rounded-full bg-gray-200 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                     >
                       {post.category.title}
                     </a>
@@ -47,15 +47,15 @@ export default class NewsItem extends Component {
                     <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
                   </div>
                   <div className="relative mt-8 flex items-center gap-x-4">
-                    <img alt="" src={post.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
+                    <img alt="" src={post.source.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
                     <div className="text-sm/6">
                       <p className="font-semibold text-gray-900">
-                        <a href={post.author.href}>
+                        <a href={post.source.href}>
                           <span className="absolute inset-0" />
-                          {post.author.name}
+                          {post.source.name}
                         </a>
                       </p>
-                      <p className="text-gray-600">{post.author.role}</p>
+                      <p className="text-gray-600">{post.source.role}</p>
                     </div>
                   </div>
                 </article>

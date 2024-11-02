@@ -13,8 +13,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Daily Pluse",
-  description: "This is a tutorial app and I am literally learning fucking NEXT JS.",
+  title: "Daily Pulse",
+  description: "This is a tutorial app and I am literally fucking learning NEXT JS so please leave me alone and Fuck off.",
 };
 
 export default function RootLayout({ children }) {
