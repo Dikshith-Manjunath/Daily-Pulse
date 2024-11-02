@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 export default class NewsItem extends Component {
   render(props) {
-    let { Title, Description, imageUrl} = this.props;
+    let { Title, Description, imageUrl, nesUrl} = this.props;
     const posts = [
         {
           id: 1,
-          title: 'Sports briefs: White Sox hire Venable as manager',
+          title: `${Title}`,
           href: "https://le10sport.com/football/mercato/mercato-henry-a-vendu-la-meche-pour-le-retour-de-zidane-718960",
           description:
-            'CHICAGO — The Chicago White Sox have hired Will Venable to take over as manager, turning to the former big league outfielder to help turn around the team after a miserable season.',
+            `${Description}`,
           date: 'Oct 16, 2024',
           datetime: '2020-03-16',
           category: { title: 'Sports', href: 'https://www.telegraphherald.com' },
@@ -17,7 +17,7 @@ export default class NewsItem extends Component {
             name: 'Telegraph Herald',
             role: 'United States of America',
             href: 'https://www.telegraphherald.com',
-            imageUrl:"https://i.bytvi.com/domain_icons/telegraphherald.png",
+            imageUrl:`${imageUrl}`,
           },
         },
         // More posts...
@@ -41,13 +41,13 @@ export default class NewsItem extends Component {
                     <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                       <a href={post.href}>
                         <span className="absolute inset-0" />
-                        {Title}
+                        {post.title}
                       </a>
                     </h3>
-                    <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{Description}</p>
+                    <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
                   </div>
                   <div className="relative mt-8 flex items-center gap-x-4">
-                    <img alt="" src={imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
+                    <img alt="" src={post.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
                     <div className="text-sm/6">
                       <p className="font-semibold text-gray-900">
                         <a href={post.author.href}>
