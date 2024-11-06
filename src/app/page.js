@@ -1,7 +1,7 @@
 "use client"
 import React, { Component } from 'react'
-import Navbar from "./components/Navbar";
-import News from "./components/News";
+import Navbar from "./Navbar";
+import News from "./news/page";
 
 export default class page extends Component {
   render() {
