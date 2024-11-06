@@ -1,5 +1,5 @@
-import React, { Component } from 'react' 
- 
+import React, { Component } from 'react'
+
 export default class NewsItem extends Component {
   render(props) {
     let { Title, Description, imageUrl, language, category, source_name, Link, date } = this.props;
