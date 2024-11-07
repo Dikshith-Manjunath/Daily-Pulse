@@ -1,7 +1,7 @@
 // News API Key: pub_57394d8d524e4d322bfbc768c5fe4a1f9766d
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
-import Spinner from "./spinner";
+import Spinner from "./Spinner";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
