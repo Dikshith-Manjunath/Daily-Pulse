@@ -1,4 +1,7 @@
 # Dayananda Sagar College of Engineering
+# Kempegowda International Airport Bengaluru
+# India Gate
+
 import webbrowser, pyperclip
 
 def open_google_maps():
@@ -9,4 +12,3 @@ def open_google_maps():
 if __name__ == "__main__":
     print("Opening Google Maps for the address in your clipboard...")
     open_google_maps()
-

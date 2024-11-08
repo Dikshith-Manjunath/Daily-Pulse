@@ -5,13 +5,13 @@ export default class NewsItem extends Component {
     let { Title, Description, imageUrl, language, category, source_name, Link, date } = this.props;
     const posts = [
         {
-          id: 1,
+          id: `1`,
           title: `${Title}`,
           href: `${Link}`,
           description:
             `${Description}`,
           date: `${date}`,
-          datetime: '2020-03-16',
+          datetime: '2020-03-16', //Need to add the time of the publishing of the article
           category: { title: `${category}`, href: '#' },
           source: {
             name: `${source_name}`,
